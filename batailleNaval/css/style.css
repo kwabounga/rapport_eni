@@ -1,0 +1,116 @@
+:root {
+  --taille-cell: 80px;
+  --taille-board: 400px;
+  --color-green: rgb(25, 221, 58);
+  --color-edges: rgb(1, 37, 7);
+  --color-backg: rgb(1, 22, 1);
+  --color-bodyb:  rgb(1, 17, 1);
+  --color-body:  rgb(1, 6, 1);
+}
+body{
+  background:var(--color-body);
+  display: flex;
+}
+#title{
+  background-color: var(--color-body);
+  font-family: 'Code',Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-green);
+  text-align: center;
+
+}
+@font-face {
+    font-family: 'Code';
+    src: url('../fonts/Code.eot');
+    src: url('../fonts/Code.eot') format('embedded-opentype'),
+         url('../fonts/Code.woff2') format('woff2'),
+         url('../fonts/Code.woff') format('woff'),
+         url('../fonts/Code.ttf') format('truetype'),
+         url('../fonts/Code.svg#Code') format('svg');
+}
+
+.over .cell{
+ text-align: center;
+ vertical-align: text-bottom;
+ color: var(--color-edges);
+ font-family: 'Code';
+}
+.over{
+display: flex;
+flex-flow: column;
+margin-left: 5px;
+margin-right: 0px;
+margin-top: 97px;
+}
+.game .over{
+display: flex;
+flex-flow: row;
+margin-left: 0px;
+margin-top: 0px;
+}
+.active{
+  color: var(--color-edges);
+}
+.text-invert{
+  display: inline-flex;
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-body);
+   background-color:var(--color-green);
+  /* height: auto; */
+  /* width: auto; */
+  text-align: left;
+}
+.text{
+  display: inline-flex;
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+}
+#board, #title{
+  /* margin: auto; */
+  /* margin-left: 5px; */
+  width: var(--taille-board);
+}
+#board{
+  background-color: var(--color-backg);
+  cursor: url("../img/noun_Target_873294.png") 26 26, auto;
+}
+.red-alert{
+  color:rgb(190, 33, 5);
+}
+.cell{
+  width: var(--taille-cell);
+  height: var(--taille-cell);
+  outline: var(--color-edges) 1px solid;
+}
+
+.line{
+  display: flex;
+  flex-flow: row;
+}
+.clouds{
+  /* background: url("../img/noun_clouds_653375.svg") no-repeat; */
+  background-size: var(--taille-cell);
+}
+@keyframes smooth_anim {
+  from   {opacity: 0.1; z-index: -1;}
+  to  {opacity: 1.0; }
+}
+.water{
+  animation-name: smooth-anim;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+  background: url("../img/noun_Sea_1433666.svg") no-repeat;
+  background-size: var(--taille-cell);
+
+
+}
+.boat{
+  background: url("../img/noun_Shipwreck_26482.svg") no-repeat;
+  background-size: var(--taille-cell);
+}
+.anim-loose{
+  animation-name: smooth-anim;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}

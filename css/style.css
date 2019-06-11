@@ -1,0 +1,81 @@
+:root {
+  --taille-cell: 80px;
+  --taille-board: 400px;
+  --color-green: rgb(25, 221, 58);
+  --color-red: rgb(175, 62, 7);
+  --color-greeb: rgb(25, 221, 174);
+  --color-edges: rgb(1, 37, 7);
+  --color-backg: rgb(1, 22, 1);
+  --color-bodyb:  rgb(1, 17, 1);
+  --color-body:  rgb(1, 6, 1);
+}
+body{
+  background:var(--color-body);
+  display: block;
+}
+
+@font-face {
+    font-family: 'Code';
+    src: url('../fonts/Code.eot');
+    src: url('../fonts/Code.eot') format('embedded-opentype'),
+         url('../fonts/Code.woff2') format('woff2'),
+         url('../fonts/Code.woff') format('woff'),
+         url('../fonts/Code.ttf') format('truetype'),
+         url('../fonts/Code.svg#Code') format('svg');
+}
+
+.text-invert{
+
+}
+.text::after{
+  content: ']';
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+  width: auto;
+}
+.text:hover{
+  content: ']<<';
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+  width: auto;
+}
+.text::before{
+  content: '[0x00] | [';
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+}
+.text{
+  /* display: flex; */
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+
+  color: var(--color-body);
+   background-color:var(--color-green);
+
+  text-align: left;
+  text-decoration: none;
+}
+h2{
+  font-family: 'Code';
+  color: var(--color-greeb);
+}
+h3{
+  font-family: 'Code';
+  color: var(--color-red);
+}
+h2::before, h3::before{
+  font-family: 'Code';
+  color: var(--color-green);
+  content: '[';
+}
+h2:after, h3::after{
+  font-family: 'Code';
+  color: var(--color-green);
+  content:']';
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Consolator</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <p id="title">the title</p>
+    <h2>Consolator</h2>
+    <h3>Modes availables</h3>
+    <p>
+    <span class="text">Instructions</span>
+    <br>
+    <span class="text decal">Type the mode and press [Enter] </span>
+    <br>
+    <span class="text-invert">cypher</span>
+    <br>
+    <span class="text-invert">hackertext</span>
+    <br>
+    <span class="text-invert">binary</span>
+    <br>
+    <span class="text-invert">decimal</span>
+    <br>
+    <span class="text-invert">hexadecimal</span>
+    <br>
+    <span class="text decal">press [F1] to help </span>
+    <h3>Ctrl+q | quit</h3>
+  </p>
+  <div id="mode"><h2>Make a choice</h2></div>
+  <div id="type">commands</div>
+  <div id="source"></div>
+  <div id="output"></div>
+  <div id="helper">helper</div>
+  <!-- <h3>???</h3> -->
+  <p>
+    <div id="console">press [Enter] to begin</div>
+    <br>
+  </p>
+
+  <script src="../js/js-easier.js" charset="utf-8"></script>
+  <script src="../js/consolator.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    window.onload = function () {
+      console.log('on load function');
+      Consolator.init();
+    };
+  </script>
+  </body>
+</html>

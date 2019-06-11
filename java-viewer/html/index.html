@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>java-viewer</title>
+    <link rel="stylesheet" href="../css/java-viewer.css">
+  </head>
+  <body>
+    <div id="java-viewer">
+
+    </div>
+    <script src="../js/ajax.js" type="text/javascript"></script>
+    <script src="../js/java-viewer.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      window.onload = function () {
+        console.log('initializing java-viewer');
+        loadJavaDocument('../java/test.java');
+      };
+    </script>
+  </body>
+</html>

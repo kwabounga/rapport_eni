@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>bataille Naval</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="over">
+    <div class="cell">1</div>
+    <div class="cell">2</div>
+    <div class="cell">3</div>
+    <div class="cell">4</div>
+    <div class="cell">5</div>
+  </div>
+  <div class="game">
+    <div id="title">[Battle - Ship]</div>
+    <div class="over">
+      <div class="cell">1</div>
+      <div class="cell">2</div>
+      <div class="cell">3</div>
+      <div class="cell">4</div>
+      <div class="cell">5</div>
+    </div>
+    <div id="board">
+      <div class="line">
+        <div class="cell"></div>
+      </div>
+    </div>
+    <div class="text-invert">SHOOTS:</div>
+    <div class="text" id="score">S[0x00]</div>
+    <div class="text-invert">RADAR:</div>
+    <div class="text" id="coordonates">X[0x00]Y[0x00]</div>
+  </br>
+    <div class="text-invert">SEARCH</div>
+    <div class="text">n[DESTROY]</div>
+    <!-- <div class="text-invert" id="statut">  [.COMPLETED ]</div> -->
+    <div class="text-invert" id="statut">  [ .PROGRESS ]</div>
+  </div>
+
+  <script src="../js/helpers.js" charset="utf-8"></script>
+  <script src="../js/batailleNaval_touch.js" charset="utf-8"></script>
+
+</body>
+
+</html>

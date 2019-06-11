@@ -1,0 +1,162 @@
+:root {
+  --taille-cell: 80px;
+  --taille-board: 400px;
+  --color-green: rgb(25, 221, 58);
+  --color-red: rgb(175, 62, 7);
+  --color-greeb: rgb(25, 221, 174);
+  --color-edges: rgb(1, 37, 7);
+  --color-backg: rgb(1, 22, 1);
+  --color-bodyb:  rgb(1, 17, 1);
+  --color-body:  rgb(1, 6, 1);
+}
+body{
+  background:var(--color-body);
+  display: block;
+  cursor: none;
+}
+p{
+  /* display: block; */
+
+}
+@font-face {
+    font-family: 'Code';
+    src: url('../fonts/Code.eot');
+    src: url('../fonts/Code.eot') format('embedded-opentype'),
+         url('../fonts/Code.woff2') format('woff2'),
+         url('../fonts/Code.woff') format('woff'),
+         url('../fonts/Code.ttf') format('truetype'),
+         url('../fonts/Code.svg#Code') format('svg');
+}
+
+.text-invert{
+
+}
+.text-invert::after{
+  content: ']';
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+  width: auto;
+}
+/* .text-invert:hover{
+  content: ']<<';
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+  width: auto;
+} */
+.text-invert::before{
+  content: '[0x00] | [';
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+}
+.text-invert{
+  /* display: flex; */
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+
+  color: var(--color-body);
+   background-color:var(--color-green);
+
+  text-align: left;
+  text-decoration: none;
+}
+
+.text::after{
+  content: ']';
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+  width: auto;
+}
+/* .text:hover{
+  color: var(--color-body);
+   background-color:var(--color-green);
+  text-align: left;
+  text-decoration: none;
+  width: auto;
+} */
+.text::before{
+  content: '[0xF6] | [';
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+
+  color: var(--color-green);
+  background-color: var(--color-body);
+  text-align: left;
+  text-decoration: none;
+}
+.decal{
+  padding-left: 10px;
+}
+#title{
+  font-size:  15pt;
+  font-family: monospace;
+
+}
+#console{
+  display:inline-block;
+  position: fixed;
+  width: auto;
+  height: 100%;
+  /* bottom:0px; */
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  top: 95%;
+}
+#source::before{
+  content : 'source>';
+}
+#output::before{
+  content : 'output>';
+}
+#console::before{
+  content : '>';
+}
+.text, #title, #console, #source, #output{
+  /* display: flex; */
+  font-family: 'Code', Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--color-green);
+  background-color: var(--color-body);
+
+  text-align: left;
+  text-decoration: none;
+}
+#title + h2{
+  font-family: 'Code';
+  color: var(--color-greeb);
+}
+#mode > h2{
+  font-family: 'Code';
+  color: white;
+  /* color: var(--color-greeb); */
+}
+
+h3, #type{
+  font-size: 16px;
+  font-family: 'Code';
+  color: var(--color-red);
+}
+#helper{
+  font-family: 'Code';
+  color: rgb(9, 97, 23);
+}
+#helper::before{
+
+  content: '//';
+}
+h2::before, h3::before, #type::before{
+  font-family: 'Code';
+  color: var(--color-green);
+  content: '[';
+}
+h2:after, h3::after, #type::after{
+  font-family: 'Code';
+  color: var(--color-green);
+  content:']';
+}

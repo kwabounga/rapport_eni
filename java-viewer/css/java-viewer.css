@@ -1,0 +1,46 @@
+body{
+
+  background: black;
+  color: white;
+}
+.java-espace{
+  padding-left: 5px;
+}
+.java-symbole{
+  display: inline-block;
+}
+.java-text{
+  color:rgb(99, 205, 84);
+}
+.java-value{
+  color:rgb(254, 157, 9);
+}
+.java-assign{
+  /* color:rgb(194, 192, 192); */
+  color:rgb(230, 205, 30);
+}
+.java-operator{
+  color:rgb(194, 192, 192);
+}
+.java-class{
+  color:rgb(182, 30, 203);
+}
+.java-key{
+  color:rgb(222, 25, 1);
+}
+.java-function{
+  color:rgb(196, 70, 93);
+}
+.java-other{
+  color:rgb(54, 168, 252);
+  /* padding-left: 5px; */
+}
+.java-args{
+  color:rgb(148, 148, 147);
+}
+.java-type{
+  color:rgb(230, 205, 30);
+}
+.java-saute{
+  display: block;
+}

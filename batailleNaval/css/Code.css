@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Code';
+    src: url('fonts/Code.eot');
+    src: url('fonts/Code.eot') format('embedded-opentype'),
+         url('fonts/Code.woff2') format('woff2'),
+         url('fonts/Code.woff') format('woff'),
+         url('fonts/Code.ttf') format('truetype'),
+         url('fonts/Code.svg#Code') format('svg');
+}

@@ -1,0 +1,58 @@
+body{
+  background: rgb(107, 206, 255);
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container{
+ display:flex;
+ flex-direction: column;
+}
+
+.playGround{
+  display:inline-flex;
+}
+
+.cell, .cells{
+  height: 30px;
+  width:  30px;
+  text-align: center;
+  padding: 4px;
+}
+
+.sheep-g{
+  transform: scaleX(-1);
+  background: url("../img/sheep-g.svg") no-repeat;
+}
+
+.sheep-d{
+  background: url("../img/sheep-d.svg") no-repeat;
+
+}
+
+.anim-win{
+  animation-name: winner-anim;
+  animation-duration: .4s;
+  animation-iteration-count: 5;
+}
+.anim-loose{
+  transform: scaleY( -1 );
+  animation-name: loose-anim;
+  animation-duration: .4s;
+  animation-iteration-count: 5;
+}
+@keyframes loose-anim {
+  0%   {background-position: top;}
+  50%  {background-position: bottom;}
+  100%  {background-position: top;}
+}
+@keyframes winner-anim {
+  0%   {background-position: top;}
+  50%  {background-position: bottom;}
+  100%  {background-position: top;}
+}
+.playGround{
+  margin: 0 auto;
+  width: 270px;
+  border-radius: 3px;
+}
