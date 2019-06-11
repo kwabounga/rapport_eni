@@ -87,7 +87,7 @@ var Consolator = {
     Consolator.titleoutput = document.getElementById('output');
     // helper
     Consolator.titlehelper = document.getElementById('helper');
-	// paste 
+	// paste
     document.addEventListener("paste", function(e) {
     // cancel paste
       e.preventDefault();
@@ -116,6 +116,11 @@ var Consolator = {
       case 'ArrowRight' :
       case 'ArrowUp' :
       case 'ArrowDown' :
+      case 'Delete' :
+      case 'Dead' :
+      case 'CapsLock' :
+      case 'Escape' :
+      case 'AltGraph' :
         evt.stopPropagation();
         evt.preventDefault();
         break;
@@ -326,8 +331,37 @@ var Consolator = {
   setHelp: function (txt) {
     Consolator.titlehelper.innerHTML = txt;
   },
+  displayMode: function (mode) {
+    var allModes = document.getElementsByClassName('mode');
+    for (var i = 0; i < allModes.length; i++) {
+      allModes[i].remClass('actif');
+    }
+    var md = 0;
+    switch (mode) {
+      case 'cypher':
+        md = 0;
+        break;
+      case 'hackertext':
+        md = 1;
+        break;
+      case 'binary':
+        md = 2;
+        break;
+      case 'decimal':
+        md = 3;
+        break;
+      case 'hexadecimale':
+        md = 4;
+
+        break;
+      default:
+
+    }
+    allModes[md].addClass('actif');
+  },
   setMode: function (mode) {
     Consolator.mode = mode;
+    Consolator.displayMode(mode);
     if(mode == 'null'){
       Consolator.titlemode.innerHTML = '<h2>' + 'Make a choice' + '</h2>';
       Consolator.titletype.innerHTML = 'commands';

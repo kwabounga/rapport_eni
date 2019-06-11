@@ -28,8 +28,8 @@ p{
          url('../fonts/Code.svg#Code') format('svg');
 }
 
-.text-invert{
-
+.actif::before{
+  padding-left: 15px;
 }
 .text-invert::after{
   content: ']';
